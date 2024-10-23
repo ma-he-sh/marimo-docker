@@ -1,0 +1,23 @@
+services:
+  marimo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: marimo
+    ports:
+      - "8484:8080"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              device_ids: ['1']
+              capabilities: [gpu]
+    volumes:
+      - ./data:/src:rw,cached
+    networks:
+      - marimo
+
+networks:
+  marimo:
+    driver: bridge
