@@ -30,8 +30,6 @@ USER user
 ENV HOME=/home/user \
     PATH=/home/user/.local/bin:$PATH
 
-ARG PYTHON_VERSION=3.10.12
-
 RUN curl https://pyenv.run | bash
 ENV PATH=$HOME/.pyenv/shims:$HOME/.pyenv/bin:$PATH
 
