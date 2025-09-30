@@ -52,5 +52,6 @@ RUN pip install torch torchvision torchaudio --extra-index-url https://download.
 RUN pip install pandas matplotlib tqdm scikit-learn scikit-image numpy scipy h5py tensorflow
 RUN pip install opencv-contrib-python-headless
 RUN pip install marimo
+RUN pip install ollama requests
 
 CMD [ "marimo", "edit", "--headless", "--token-password", "password", "--host", "0.0.0.0", "-p", "8080" ]

@@ -15,9 +15,6 @@ services:
     #          capabilities: [gpu]
     volumes:
       - ./data:/src:rw,cached
+      - ./marimo.toml:/home/user/.config/marimo/marimo.toml:ro
     networks:
       - marimo
-
-networks:
-  marimo:
-    driver: bridge

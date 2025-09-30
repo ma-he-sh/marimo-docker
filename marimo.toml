@@ -1,0 +1,9 @@
+# AI Models configuration
+[ai.models]
+chat_model = "ollama/llama3.1:latest"
+edit_model = "ollama/codellama"
+autocomplete_model = "ollama/codellama"
+
+# Ollama configuration
+[ai.ollama]
+base_url = "http://127.0.0.1:11434/v1"
