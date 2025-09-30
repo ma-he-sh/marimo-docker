@@ -53,5 +53,8 @@ RUN pip install pandas matplotlib tqdm scikit-learn scikit-image numpy scipy h5p
 RUN pip install opencv-contrib-python-headless
 RUN pip install marimo
 RUN pip install ollama requests
+RUN pip install transformers accelerate
+RUN pip install diffusers[torch]
+RUN pip install openai
 
 CMD [ "marimo", "edit", "--headless", "--token-password", "password", "--host", "0.0.0.0", "-p", "8080" ]
