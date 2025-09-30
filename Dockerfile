@@ -1,7 +1,11 @@
 ARG CUDA_VERSION=12.1.1
-ARG PYTHON_VERSION=3.10.12
 
 FROM nvidia/cuda:${CUDA_VERSION}-cudnn8-devel-ubuntu22.04
+
+# Define ARG after FROM so it's available in the build context
+ARG PYTHON_VERSION=3.10.12
+# Convert ARG to ENV so it's available in RUN commands
+ENV PYTHON_VERSION=${PYTHON_VERSION}
 
 ENV DEBIAN_FRONTEND=noninteractive TZ=America/Toronto
 
