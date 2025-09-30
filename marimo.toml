@@ -1,9 +1,9 @@
 # AI Models configuration
 [ai.models]
-chat_model = "ollama/llama3.1:latest"
-edit_model = "ollama/codellama"
-autocomplete_model = "ollama/codellama"
+chat_model = "ollama/gpt-oss:20b"
+edit_model = "ollama/gpt-oss:20b"
+autocomplete_model = "ollama/gpt-oss:20b"
 
 # Ollama configuration
 [ai.ollama]
-base_url = "http://127.0.0.1:11434/v1"
+base_url = "http://10.0.8.190:11434/v1"
