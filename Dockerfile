@@ -21,6 +21,8 @@ RUN apt-get -o Acquire::Max-FutureTime=86400 update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/* \
     && git lfs install
 
+RUN apt-get update && apt-get install -y --no-install-recommends nvidia-utils-535
+
 # INSTALL OPENCV
 RUN apt-get update
 RUN apt-get install libopencv-dev python3-opencv -y
